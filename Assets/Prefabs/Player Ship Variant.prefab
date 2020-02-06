@@ -15,6 +15,10 @@ MonoBehaviour:
   movementSpeed: 25
   xRange: 12
   yRange: 8
+  positionPitchFactor: -1.25
+  controlPitchFactor: -20
+  positionYawFactor: 1.5
+  controlRollFactor: -20
 --- !u!1001 &5599035179959312336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28,7 +32,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4433942057210488, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4433942057210488, guid: f805c7b2f982faf43833878e4f22ae2a, type: 3}
       propertyPath: m_LocalPosition.y
