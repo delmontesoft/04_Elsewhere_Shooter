@@ -1,21 +1,18 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] [Tooltip("In ms^-1")] float movementSpeed = 25f;
-    [SerializeField] [Tooltip("In m")] float xRange = 12f;      //16:9 screen
-    [SerializeField] [Tooltip("In m")] float yRange = 8f;       //16:9 screen
+    [SerializeField] [Tooltip("In m")] float xRange = 12f;
+    [SerializeField] [Tooltip("In m")] float yRange = 8f;
 
-    [SerializeField] float positionPitchFactor = -1.25f;         //16:9 screen
-    [SerializeField] float controlPitchFactor = -20f;            //16:9 screen
+    [SerializeField] float positionPitchFactor = -1.25f;
+    [SerializeField] float controlPitchFactor = -20f;
 
-    [SerializeField] float positionYawFactor = 1.5f;            //16:9 screen
+    [SerializeField] float positionYawFactor = 1.5f;
 
-    [SerializeField] float controlRollFactor = -20f;            //16:9 screen
+    [SerializeField] float controlRollFactor = -20f;
 
     float xThrow, yThrow;
 

@@ -1,20 +1,12 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Splash : MonoBehaviour
+public class SceneLoader : MonoBehaviour
 {
     [SerializeField] float levelLoadDelay = 10f;
 
-    // Called before Start()
-    void Awake()
-    {
-        DontDestroyOnLoad(gameObject);     // this object is not destroyed when loading the next scene
-    }
-
-        // Start is called before the first frame update
-        void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         Invoke("LoadNextLevel", levelLoadDelay);
     }
@@ -26,9 +18,10 @@ public class Splash : MonoBehaviour
 
         if (nextSceneIndex >= SceneManager.sceneCountInBuildSettings)
         {
-            nextSceneIndex = 0;         // go back to the splash screen
+            nextSceneIndex = 0;         // go back to the splash screen (or a win screen)
         }
 
         SceneManager.LoadScene(nextSceneIndex);
     }
+
 }
