@@ -61,7 +61,8 @@ namespace UnityStandardAssets.Utility
         {
             int point = 0;
 
-            if (Length == 0)
+            //if (Length == 0)              // Original Code from Unity
+            if (Length <= Mathf.Epsilon)    // Better comparison with 0 (epsilon) for a float
             {
                 Length = distances[distances.Length - 1];
             }

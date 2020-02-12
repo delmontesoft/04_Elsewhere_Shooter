@@ -1,37 +1,32 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    [Header("General")]
     [SerializeField] [Tooltip("In ms^-1")] float movementSpeed = 25f;
     [SerializeField] [Tooltip("In m")] float xRange = 12f;
     [SerializeField] [Tooltip("In m")] float yRange = 8f;
 
+    [Header("Screen Position Based")]
     [SerializeField] float positionPitchFactor = -1.25f;
-    [SerializeField] float controlPitchFactor = -20f;
-
     [SerializeField] float positionYawFactor = 1.5f;
 
+    [Header("Control Throw Based")]
+    [SerializeField] float controlPitchFactor = -20f;
     [SerializeField] float controlRollFactor = -20f;
 
-    float xThrow, yThrow;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float xThrow, yThrow;
+    bool isControlEnabled = true;
 
     // Update is called once per frame
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        print("Player triggered something!");
+        if (isControlEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
     private void ProcessTranslation()
@@ -62,5 +57,13 @@ public class Player : MonoBehaviour
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    void OnPlayerDeath()        // called by string reference (in case of renaming)
+    {
+        isControlEnabled = false;
+        print("Surprise! You're dead!");
+
+        // do something when player dies
     }
 }
