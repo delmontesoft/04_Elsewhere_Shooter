@@ -62,8 +62,7 @@ public class PlayerController : MonoBehaviour
     void OnPlayerDeath()        // called by string reference (in case of renaming)
     {
         isControlEnabled = false;
-        print("Surprise! You're dead!");
 
-        // do something when player dies
+        // do something else when player dies?
     }
 }
