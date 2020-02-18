@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaIndirect: 2
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ShowResolutionOverlay: 1
-  m_LightingDataAsset: {fileID: 112000000, guid: dd156720862fe5b49ac5bdba8a6139a1,
+  m_LightingDataAsset: {fileID: 112000000, guid: 959e046d96e3de14188fe3181fe62605,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -139,7 +139,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 10
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1 &39526026 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746,
@@ -160,7 +161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 15
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1001 &43932858
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -686,7 +688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 15
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1 &820222783
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1025,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
+--- !u!1 &938592344 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5202773445189315383, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7550814798605988751}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &950686164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1087,7 +1096,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 15
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1 &1178623530
 GameObject:
   m_ObjectHideFlags: 0
@@ -1268,7 +1278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 10
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1 &1456911234 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1074994750746910, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
@@ -1289,7 +1300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 10
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1 &1477785490 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1074994750746910, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
@@ -1310,7 +1322,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 10
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!1001 &1485152079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1396,12 +1409,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 15
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!4 &1642235427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746,
     type: 3}
   m_PrefabInstance: {fileID: 1284477799}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1651254591 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1855013969099086770, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+    type: 3}
+  m_PrefabInstance: {fileID: 7550814798605988751}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1661909903
 PrefabInstance:
@@ -1689,7 +1709,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
   parent: {fileID: 1787396528}
-  killScore: 10
+  scorePerHit: 10
+  hitPoints: 5
 --- !u!4 &2004039663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4990607877152018, guid: 6d7afa73fcb1fce4cb4b65361a29bcbd,
@@ -1919,6 +1940,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1855013969099086770, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855013969099086770, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Right
+      objectReference: {fileID: 0}
+    - target: {fileID: 2591817385333963117, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2591817385333963117, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 938592344}
+    - target: {fileID: 2591817385333963117, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 1651254591}
     - target: {fileID: 2721050161193399884, guid: 210aac7d93b2fb647a7020531b5cc7aa,
         type: 3}
       propertyPath: m_IsActive
@@ -2003,6 +2049,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202773445189315383, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5202773445189315383, guid: 210aac7d93b2fb647a7020531b5cc7aa,
+        type: 3}
+      propertyPath: m_Name
+      value: Gun Left
       objectReference: {fileID: 0}
     - target: {fileID: 6769450857504517039, guid: 210aac7d93b2fb647a7020531b5cc7aa,
         type: 3}

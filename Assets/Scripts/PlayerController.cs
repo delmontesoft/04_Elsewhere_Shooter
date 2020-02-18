@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] [Tooltip("In ms^-1")] float movementSpeed = 25f;
     [SerializeField] [Tooltip("In m")] float xRange = 12f;
     [SerializeField] [Tooltip("In m")] float yRange = 8f;
+    [SerializeField] GameObject[] guns;
 
     [Header("Screen Position Based")]
     [SerializeField] float positionPitchFactor = -1.25f;
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
         {
             ProcessTranslation();
             ProcessRotation();
+            ProcessFiring();
         }
     }
 
@@ -58,6 +60,34 @@ public class PlayerController : MonoBehaviour
         float roll = xThrow * controlRollFactor;
 
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeActivateGuns();
+        }
+    }
+
+    private void DeActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
+        }
     }
 
     void OnPlayerDeath()        // called by string reference (in case of renaming)
