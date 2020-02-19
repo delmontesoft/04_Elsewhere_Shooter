@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 4354848751893472}
   - component: {fileID: 33219907115598346}
   - component: {fileID: 23021765208169616}
+  - component: {fileID: 1888339330}
   m_Layer: 0
-  m_Name: Enemy Ship 02
+  m_Name: Enemy NightWing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,3 +78,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1888339330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1238095480485456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e91295453998cf945a7cb456f708030d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFX: {fileID: 8766025564308300005, guid: f75f925e08f959e4dbc6035d19513860, type: 3}
+  parent: {fileID: 0}
+  scorePerHit: 10
+  hitPoints: 3
